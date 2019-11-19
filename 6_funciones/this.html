@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>THIS</title>
+
+    <style>
+        div{
+            width: 200px;
+            height: 50px;
+            background-color: chocolate;
+            text-align:center;
+            padding: 2%;
+            margin: 0 auto;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px gray;
+            cursor: pointer;
+        }
+    
+    
+    </style>
+
+</head>
+<body>
+
+<div class="boton">
+    Da click para obtener el contenido
+</div>
+
+
+
+<script>
+const boton = document.querySelector('.boton');
+
+
+/* boton.addEventListener('click',function(){
+    console.log(this.innerHTML);    
+});
+ */
+
+ //UTILIZAMOS LA IMPLEMENTACIÓN ARROW FUNCTION
+boton.addEventListener('click', () => {
+    console.log(this);    
+    console.log(this.location ="https://jhonfa.com.co");    
+});
+
+
+
+</script>
+    
+</body>
+</html>

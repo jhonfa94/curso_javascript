@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funciones Callbacks</title>
+</head>
+<body>
+
+<script>
+    /* funcion callback */
+    function calcular (datoA,datoB, sumarCB,restarCB){
+        var suma = datoA + datoB;
+        var restar = datoA - datoB;
+
+        sumarCB(suma);
+        restarCB(restar);
+
+    }
+
+    //invoco la funcion
+    calcular(2,3,function(resultado){
+        console.log('suma =>',resultado);
+        
+    },function(resultado){
+        console.log('resta =>',resultado);
+        
+    }
+    );
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Métodos númericos</title>
+</head>
+<body>
+    
+    <script>
+    /* MÉTODOS NÚMERICOS */    
+    
+    var numero = "10.30";
+
+    //CONVIERTE EL STRING EN NUMERO
+    console.log("Number: ",typeof numero, Number(numero)); 
+
+    //CONVIERTE EL STRING EN NUMERO ENTERO
+    console.log("parseInt: ", parseInt(numero));
+
+    //CONVIERTE LA CADENA DE TEXTO EN NUMEROS DECIMALES
+    console.log("parseFloat: ", parseFloat(numero));
+
+    //VALIDA SI LA VARIABLE SI ES NUMERICA 
+    console.log("isNaN: ", isNaN(numero) );
+
+    //VALIDA SI LA VARIABLE ES O NO UN NUMERO ENTERO, ESTE METODO EXIGE LLAMAR AL OBJETO Number para poder ser llamado
+    console.log("isInteger: ", Number.isInteger(numero) );
+    
+    
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FUNCIONES PARAMETROS</title>
+</head>
+<body>  
+    <img src="file://///192.168.101.51/inf_sit$/fichatecnica/10003991/img1.jpg" alt="">
+<script>
+
+/* FUNCION CON PARAMETROS */
+
+function parametros(parametro1,parametro2){
+    console.log("El parametro1  es "+parametro1);
+    console.log("El parametro2  es "+parametro2);
+ 
+    var resultado = "El parametro 1 es: "+ parametro1 + " y el parametro 2 es: "+parametro2 ;
+    return resultado;
+}
+
+/* SE PASA LOS PARAMETROS A LAS FUNCIONES  */
+parametros("Hola",22);
+
+
+//INICIALIZACION DE PARAMETROS 
+function contar(cantidad = 0){
+    console.log("Cantidad que se tiene actualmente "+cantidad);    
+}
+//Al momento de invocar la funcion en blanco contar() mostrara 0 si se pasa un parametro este se muestra el valor asignado que se pasa contar(20)
+
+
+
+</script>
+
+
+</body>
+</html>

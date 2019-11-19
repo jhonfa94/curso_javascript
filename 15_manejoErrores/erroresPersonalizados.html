@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Errores Personalizados </title>
+</head>
+<body>
+
+    <script>
+        //Errores personalizados
+        var valor1 = 10;
+        var valor2 = 20;
+
+        try {
+            if (valor1 > valor2) {
+                console.log(`Mensaje de validación: ${valor1} si es mayor que ${valor2}`);
+                
+            } else {
+                //
+                throw new Error(`${valor1} no es mayor que ${valor2} `);
+            }
+        } catch (error) {
+            console.log(error);
+            
+        }
+    
+    </script>
+    
+</body>
+</html>

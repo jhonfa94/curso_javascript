@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FUNCIONES SPREAD</title>
+</head>
+<body>  
+    <img src="file://///192.168.101.51/inf_sit$/fichatecnica/10003991/img1.jpg" alt="">
+<script>
+
+
+/* PARAMETROS SPREAD */
+/* Se declara en la invocación, por medio de tres puntos*/
+/* Combinamos los parametros de tipo REST y SPREAD  */
+function cocinar(ingrediente1,ingrediente2,ingrediente3, ...otros){
+    console.log("Ingrediente1 => " + ingrediente1);
+    console.log("Ingrediente2 => " + ingrediente2);
+    console.log("Ingrediente3 => " + ingrediente3);
+    console.log("Otros => " + otros);    
+}
+
+var ingredientesBase = ['Pollo','Tomate'];
+cocinar(...ingredientesBase,"Arroz","Pescado","Chile");
+
+
+
+</script>
+
+
+</body>
+</html>

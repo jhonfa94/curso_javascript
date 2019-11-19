@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Generación de Arreglos</title>
+</head>
+<body>
+
+    <div class="platillos">
+        <p>Ceviche</p>
+        <p>Tacos</p>
+        <p>Pasta</p>
+    </div>
+    
+
+<script>
+
+    //Generación de arreglos con split() from() y of()
+   
+
+    // -- split();
+    // Nos convierte el string en un arreglo
+    var mensaje = "ceviche, tacos, pasta";
+    //var platillos = mensaje.split(', ');
+
+    // -- Array.from();
+    // Permite seleccionar un contenido de html y generarlo como un array
+    var platillosHTML = Array.from(document.querySelectorAll('.platillos p'));
+    //se hace un mapeo de todos los contenidos
+    var platillos = platillosHTML.map(platillo  => platillo.textContent);
+
+    // -- Array.of();
+    // Genera todo aquello 
+    var platillosOf = Array.of('ceviche','tacos','pasta');
+
+
+    //
+
+    console.log(platillosOf);
+    
+
+</script>
+
+
+</body>
+</html>

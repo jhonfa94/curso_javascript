@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Evento Teclado</title>
+
+    <style>
+        div{
+            width: 200px;
+            height: 50px;
+            background-color: chocolate;
+            text-align:center;
+            padding: 2%;
+            margin: 0 auto;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px gray;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+
+
+    <div class="boton">
+            Da click para obtener el contenido
+    </div>
+    
+
+<script>
+    //Eventos del teclado
+
+    //keydown
+    //keypress
+    //keyup
+
+   
+
+    window.addEventListener('keydown',function(event){
+        console.log('Pulsando tecla : '+event.keyCode +" => "+String.fromCharCode(event.keyCode)); 
+       if (event.keyCode == 13) {
+            console.log("Has precionado la tecla enter");            
+       } 
+               
+    });
+
+    window.addEventListener('keypress',function(event){
+        console.log('Tecla pulsada');        
+    });
+
+    window.addEventListener('keyup',function(event){
+        console.log('Tecla libereada');        
+    });
+
+    
+
+</script>
+
+</body>
+</html>

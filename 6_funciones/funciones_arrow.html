@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funciones Arrow</title>
+
+</head>
+<body>
+    
+<script>
+
+var saludar = nombre => "Hola " + nombre;
+console.log(saludar('Jhonfa'));
+
+var sumar = cantidad => cantidad +10;
+console.log(sumar(10));
+
+
+var calcular = (datoA, datoB) => datoA + datoB;
+console.log(calcular(10,20));
+
+
+var generar = (datoA, datoB) => {
+    var datoC = 5;
+    return datoA + datoB;
+}
+console.log(generar(10,15));
+
+
+var validar = () => {
+    return "Validación correcta" ;
+}
+console.log(validar());
+
+
+
+
+
+</script>
+
+</body>
+</html>

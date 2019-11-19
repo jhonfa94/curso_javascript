@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Validación Elementos de un Arreglo</title>
+</head>
+<body>
+
+<script>
+
+    var resultado = null;
+
+    var menu = [
+        {nombre : 'Ceviche', precio: 20, pais: 'Perú'},
+        {nombre : 'Tacos', precio: 10, pais: 'México'},
+        {nombre : 'Pasta', precio: 50, pais: 'Italia'},
+        {nombre : 'Quesadillas', precio: 15, pais: 'México'},
+    ];
+
+
+
+    //Este método some existe en todos los arreglos
+    //Recibe un callback 
+    /* some hace toda la iteración por cada elemento 
+     */
+
+    /*  resultado = menu.some(platillo => platillo.precio <= 20 );
+    console.log("¿Hay platillos abajo de 20 ? ", resultado);
+    */
+
+    //every
+    //Valida que todos los elementos 
+    resultado = menu.every(platillo => platillo.precio <= 60 );
+    console.log("¿Hay platillos abajo de 20 ? ", resultado);
+    
+
+
+</script>
+    
+</body>
+</html>

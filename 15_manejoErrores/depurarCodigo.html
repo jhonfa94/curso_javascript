@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Depurar Errores </title>
+</head>
+<body>
+    
+
+    <script>
+        //Clases de POO en JavaScript
+
+        class Producto{
+            constructor(numSerie){
+                this.numSerie = numSerie;
+                this.tiempoGrarantia = 100;
+            }
+
+            //static, va hacer el que el metodo infotienda en la clase producto, este disponible aunque no se haga una instancia
+            static get infoTienda(){
+                console.log('Productos de la tienda Patito Inc');                
+            }
+
+            set garantia(value){
+                this.tiempoGrarantia -= value;
+            }
+
+            get garantia(){
+                return this.tiempoGrarantia;
+            }
+        }
+
+        /* Al momento de heredar la clase Producto se llama el contructor de Producto, ya que en este 
+        momento Pantalla es hijo de Producto, para ello dentro del contructor de Pantalla se llama
+        mediante super(parametro_si_tiene) */
+
+        class Pantalla extends Producto{
+            //da el paso para inicialializar las cosas
+            //define lo que se va a tener en la clase
+            // se debe adicionar el constructor de la clase padre
+            constructor(numSerie,marca,modelo,pulgadas){
+                super(numSerie);
+                this.marca = marca;
+                this.modelo = modelo;
+                this.pulgadas = pulgadas;
+            } 
+
+            //creamos los metodos, no necesitan la palabra reservada de function
+            encendidio(){
+                this.garantia = 1;
+                console.log(`La pantalla ${this.marca} se ha encendido`)
+            }
+
+            volumen(){
+                console.log(`El volumen se ha modificado`);
+            }
+
+            info(){
+                console.log(`la pantalla ${this.marca} de modelo ${this.modelo} es de ${this.pulgadas} `);
+            }
+
+            //Generando mas propiedades
+
+            // -set, definimos una función, que recibe un dato y que con ese mismo vamos asignar un valor
+            set peso(value){
+                this.kgs = value.trim();
+            }
+
+
+            // -get, obtenemos esa información y con el return podemos regresarlo
+            get peso(){
+                return this.kgs;
+            }
+
+
+
+
+
+
+        }
+
+        //Se instancia la clase, y debido a que esta se hereda se debe pasar el constructor de Producto que es serie
+        const tvSala  = new Pantalla ('123456','Master', 'Oasis', 55);
+        const tvHabitacion = new Pantalla ('8975','Origin', 'Artemis',80);
+
+
+        /* 
+        function Pantalla(marca,modelo,pulgadas){
+            this.marca = marca;
+            this.modelo = modelo;
+            this.pulgadas = pulgadas;
+        }
+
+        Pantalla.prototype.encendido = function(){
+            console.log(`La pantalla ${this.marca} se ha encendido`);            
+        };
+        
+        Pantalla.prototype.volumen = function(){
+            console.log(`El volumen se ha modificado`);            
+        };
+        
+        Pantalla.prototype.info = function(){
+            console.log(`la pantalla ${this.marca} de modelo ${this.modelo} es de ${this.pulgadas} `);   
+        };
+
+        const tvSala  = new Pantalla ('Master', 'Oasis', 55);
+        const tvHabitacion = new Pantalla ('Origin', 'Artemis',80);
+         */
+    
+    </script>
+</body>
+</html>

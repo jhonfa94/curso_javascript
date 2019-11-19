@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filtro de Arreglos</title>
+</head>
+<body>
+    
+<script>
+    //Filtro de Arreglos
+
+    var platillos = ['ceviche','tacos','pasta','arroz'];  
+
+    var menu = [
+        {nombre : 'Ceviche', precio: 20, pais: 'Perú'},
+        {nombre : 'Tacos', precio: 10, pais: 'México'},
+        {nombre : 'Pasta', precio: 50, pais: 'Italia'},
+        {nombre : 'Quesadillas', precio: 15, pais: 'México'},
+    ];
+
+    var resultado = null;
+
+    //resultado = menu.find(platillo => platillo.pais == 'México');
+    
+    resultado = menu.filter(platillo => platillo.pais == 'México');
+
+
+    console.log(resultado);
+    
+    
+</script>
+
+</body>
+</html>

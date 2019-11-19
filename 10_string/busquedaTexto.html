@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Busqueda de texto </title>
+</head>
+<body>
+    
+    <script>
+        //Busqueda de texto por índices por expresiones regulares
+
+
+        //Métodos  búsqueda | Parte 1
+        var mensaje = "Estoy aprendiendo JavaScript y estoy aprendiendo mucho";
+        var resultado;
+
+        //indexOf
+        //resultado = mensaje.indexOf("aprendiendo");
+        /* Busca la primera ocurrencia del valor que estamos buscando
+        lo que nos regresa es la posición que se tiene  */
+
+
+        //lastIndexOf
+        /* Nos muestra el resultado de la ultima incidencia que se tiene en la cadena de texo */
+        //resultado = mensaje.lastIndexOf("aprendiendo");
+
+        //search
+        /* Nos muestra la posición del primer resultado encontrado */
+        //resultado = mensaje.search("aprendiendo");
+
+
+        //search | Expresión regular
+        /* Nos regresa un valor númerico el cual nos indica que: 
+        -1 no encontro ningún resultado coincidente
+        i es el operador cain sensitive, lo que nos ayuda a encontrar el resultado sea porque esten en mayusculas o minuscula el valor a buscar
+         */
+        resultado = mensaje.search(/Ja/i);
+
+        console.log(resultado);
+        
+
+
+
+    </script>
+</body>
+</html>

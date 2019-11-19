@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clases en JavaScript</title>
+</head>
+<body>
+    
+
+    <script>
+        //Clases de POO en JavaScript
+
+        class Pantalla{
+            //da el paso para inicialializar las cosas
+            //define lo que se va a tener en la clase
+            constructor(marca,modelo,pulgadas){
+                this.marca = marca;
+                this.modelo = modelo;
+                this.pulgadas = pulgadas;
+            } 
+
+            //creamos los metodos, no necesitan la palabra reservada de function
+            encendidio(){
+                console.log(`La pantalla ${this.marca} se ha encendido`)
+            }
+
+            volumen(){
+                console.log(`El volumen se ha modificado`);
+            }
+
+            info(){
+                console.log(`la pantalla ${this.marca} de modelo ${this.modelo} es de ${this.pulgadas} `);
+            }
+
+            //Generando mas propiedades
+
+            // -set, definimos una función, que recibe un dato y que con ese mismo vamos asignar un valor
+            set peso(value){
+                this.kgs = value.trim();
+            }
+
+
+            // -get, obtenemos esa información y con el return podemos regresarlo
+            get peso(){
+                return this.kgs;
+            }
+
+
+
+        }
+
+        //Se instancia la clase
+        const tvSala  = new Pantalla ('Master', 'Oasis', 55);
+        const tvHabitacion = new Pantalla ('Origin', 'Artemis',80);
+
+
+        /* 
+        function Pantalla(marca,modelo,pulgadas){
+            this.marca = marca;
+            this.modelo = modelo;
+            this.pulgadas = pulgadas;
+        }
+
+        Pantalla.prototype.encendido = function(){
+            console.log(`La pantalla ${this.marca} se ha encendido`);            
+        };
+        
+        Pantalla.prototype.volumen = function(){
+            console.log(`El volumen se ha modificado`);            
+        };
+        
+        Pantalla.prototype.info = function(){
+            console.log(`la pantalla ${this.marca} de modelo ${this.modelo} es de ${this.pulgadas} `);   
+        };
+
+        const tvSala  = new Pantalla ('Master', 'Oasis', 55);
+        const tvHabitacion = new Pantalla ('Origin', 'Artemis',80);
+         */
+    
+    </script>
+</body>
+</html>

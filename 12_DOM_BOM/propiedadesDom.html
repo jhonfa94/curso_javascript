@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Propiedades DOM</title>
+</head>
+<body>
+    
+    <h1 class="title">Lorem Ipsun</h1>
+    <button id="boton">¡Púlsame!</button>
+    <div id="container">
+        <p class="principal">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores delectus soluta amet labore distinctio assumenda, quibusdam quidem omnis perferendis quas perspiciatis esse placeat vel, earum rerum fugiat expedita. Omnis, fugiat!
+        </p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque tempora omnis officiis consectetur, vitae fugit. Veritatis, magni nulla. Voluptatum, hic? Fuga tenetur inventore necessitatibus repudiandae aliquid quibusdam laborum iusto? Fuga unde tenetur id!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non laboriosam omnis minima! Ex, nisi aut. Nesciunt eveniet, at atque explicabo dicta obcaecati soluta mollitia fugiat voluptatum inventore ad quod, unde a, iste tempore. Asperiores voluptas dicta mollitia. Sequi iure illum facere eos nihil. Molestias in pariatur totam deserunt eaque amet?</p>
+    </div>
+
+    <script>
+        //Propiedades y métodos del DOM
+        var boton = document.getElementById("boton");
+
+        //obitiene todos los elementos por etiqueta
+        var todosLosParrafos = document.getElementsByTagName('p'); 
+        var parrafoPorClase = document.getElementsByClassName('principal')[0].textContent;
+
+
+        var foto = document.createElement('img');
+        foto.src = "foto1.jpg";
+        foto.name = 'foto1';
+        foto.width = 400;
+        document.body.appendChild(foto);
+
+        //Añadiendo evento a la foto
+        foto.addEventListener('click',function(){
+            if (this.name === 'foto1') {
+                this.src = 'foto2.jpg';
+                this.name = 'foto2';
+            } else {
+                this.src = 'foto1.jpg';
+                this.name = 'foto1';
+            }
+        });
+
+        boton.addEventListener('click',function(){
+            console.log(todosLosParrafos);
+            console.log(parrafoPorClase);
+
+            //cambiando estilos del boton
+            boton.style.backgroundColor = "green";
+            boton.style.color ="white";
+            boton.style.width = "200px";
+            boton.style.height = "50px";
+            boton.style.fontSize = "20px";
+                           
+        });
+    </script>
+   
+
+</body>
+</html>

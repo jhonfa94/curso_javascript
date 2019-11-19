@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Temporizador</title>
+</head>
+<body>
+
+
+<script>
+
+//setInterval 
+//Ejecucion de un elemento cada determinado tiempo
+
+//setTimeout
+//Ejecuta una accion durante un tiempo que se le establece
+
+//El tiempo que se le asigna es en milisegundos
+
+var temporizador = setInterval(function(){
+    setColor();
+},2000);
+
+setTimeout(function(){
+    stopChangeColor();
+},5000);
+
+
+//funcion para cambiar el color
+function setColor(){
+    var pagina = document.body;
+    pagina.style.backgroundColor = pagina.style.backgroundColor == "blue" ? "green" : "blue"
+}
+
+function stopChangeColor(){
+    clearInterval(temporizador);
+}
+
+
+</script>    
+</body>
+</html>

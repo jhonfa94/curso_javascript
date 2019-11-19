@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Propiedades BOM</title>
+</head>
+<body>
+    
+    <h1 class="title">Lorem Ipsun</h1>
+    <button id="boton">¡Púlsame!</button>
+    <div id="container">
+        <p class="principal">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores delectus soluta amet labore distinctio assumenda, quibusdam quidem omnis perferendis quas perspiciatis esse placeat vel, earum rerum fugiat expedita. Omnis, fugiat!
+        </p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque tempora omnis officiis consectetur, vitae fugit. Veritatis, magni nulla. Voluptatum, hic? Fuga tenetur inventore necessitatibus repudiandae aliquid quibusdam laborum iusto? Fuga unde tenetur id!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non laboriosam omnis minima! Ex, nisi aut. Nesciunt eveniet, at atque explicabo dicta obcaecati soluta mollitia fugiat voluptatum inventore ad quod, unde a, iste tempore. Asperiores voluptas dicta mollitia. Sequi iure illum facere eos nihil. Molestias in pariatur totam deserunt eaque amet?</p>
+
+
+    </div>
+
+    <script>
+        //Propiedades y métodos del BOM
+        var boton = document.getElementById("boton");
+        var principal = document.getElementsByClassName('principal')[0];
+
+        console.log('innerHeight: ', window.innerHeight);
+        console.log('innerWidth: ', window.innerWidth);
+
+        //Trabajando con Datos almacenados en el navegador 
+        //Recibe dos parametros, el primero es el campo y el segundo el contenido
+        localStorage.setItem('contenido', 'Código ay café es una gran combinación')
+        localStorage.setItem('contenido2', 'Pruebas de almacenamientos en la sesión')
+    
+        boton.addEventListener('click',function(){
+
+            var contenido = localStorage.getItem('contenido');
+            principal.innerHTML = contenido;
+
+            window.history.forward(); //avanza en la navegacion
+            window.history.back(); //regresa  en la navegacion
+            window.history.go(3); //Nos podemos mover a través del historico
+
+           
+        });
+        
+
+      
+
+
+    
+    </script>
+   
+
+</body>
+</html>

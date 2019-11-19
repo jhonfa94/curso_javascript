@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Indice de elementos</title>
+</head>
+<body>
+
+<script>
+    var platillos = ['ceviche','tacos','pasta','arroz'];    
+
+    //var pElegido = platillos.find( platillo => platillo == 'pasta' );
+
+    var menu = [
+        {nombre : 'Ceviche', precio: 20, pais: 'Perú'},
+        {nombre : 'Tacos', precio: 10, pais: 'México'},
+        {nombre : 'Pasta', precio: 50, pais: 'Italia'},
+    ];
+
+    //var numPlatillo = platillos.findIndex(platillo => platillo == 'tacos');
+
+    var numPlatillo = menu.findIndex(platillo => platillo.nombre == 'Pasta');
+
+    console.log("Platillo número: " , numPlatillo);
+    
+
+
+
+</script>
+    
+</body>
+</html>

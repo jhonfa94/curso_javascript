@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funciones Anonimas</title>
+</head>
+<body>
+    
+<script>
+    //PRIMERA FORMA DE HACER FUNCIONES ANONIMAS
+    /* (
+        function(){
+            var mensaje = "Hola de nuevo";
+            console.log(mensaje);
+            
+        }
+    )(); */
+
+    //SEGUNDA FORMA DE HACER FUNCIONES ANONIMAS
+    var saludar = function(){
+        var mensaje = "Hola de nuevo";
+        return mensaje;
+    }
+    
+
+    var saludar2 = function(nombre = ''){
+        var mensaje = "Hola "+nombre;
+        return mensaje;
+    }
+    
+
+
+
+    
+
+    
+</script>
+
+</body>
+</html>

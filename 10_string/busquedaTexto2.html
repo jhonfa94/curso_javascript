@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Busqueda de texto</title>
+</head>
+<body>
+
+<script>
+    //  Métodos de búsqueda | Parte 2
+
+    var mensaje = "Estoy aprendiendo JavaScirpt y estoy Aprendiendo mucho"; 
+    var resultado;
+
+    //LAS EXPESIONES REGULARES EN JAVASCRIPT SE TRABAJAN CON DOBLES DIGONALES
+    //match: trabaja por medio de una exprsión regular 
+    //El resultado nos lo da en un arreglo
+    //para que pueda extraer todos los resultados de la cadena de texo y no solo una se debe agregar una g despues del / 
+    //podemos mezclar la g con la i que la i es de cain sencitive 
+    //resultado = mensaje.match(/aprendiendo/gi);
+
+    //substr: lo que retorna es el inicio y fin de la cadena de texto de los parametros que se le asigna 
+    //resultado = mensaje.substr(6,11);
+
+    //substring: la diferencia es que el segundo parametro inicia a contar los caracteres desde el inicio
+    //resultado = mensaje.substring(6,17);
+
+
+    //chartAt: retorna u caracte en la posición que se le pasa, para ello la busqueda inicia desde 0, como un arreglo
+    resultado = mensaje.charAt(3);
+
+
+    console.log(resultado);
+    
+    
+</script>
+    
+</body>
+</html>
